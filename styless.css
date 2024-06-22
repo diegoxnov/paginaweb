@@ -1,0 +1,263 @@
+body{
+    /*background-color: rgb(54, 69, 80);*/
+    background-image: url('/imagenes/fondo3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    margin: 0;
+
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: #0f1c30;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    z-index: 1000;
+    
+}
+
+.header-container h1 {
+    margin: 0;
+    padding: 10px; 
+    font-size: 2rem; 
+    color: azure;
+}
+
+.header-container .flex-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto; 
+    height: 5vh;
+
+    background-color: #0f1c30;
+    
+
+}
+
+/*Animaciones para el nav*/
+
+.header-container .flex-nav a{
+    text-decoration: none;
+    color: #c0d0ef;
+    padding: 10px;
+    transition: color 0.3s;
+    position: relative;
+    overflow: hidden;
+    font-size: 1.3rem;
+}
+
+.header-container .flex-nav a:hover{
+    color: #66bdc0;
+}
+
+
+.header-container .flex-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background-color: #66bdc0; /* con esto se subraya*/
+    transition: all 0.3s;
+}
+
+.header-container .flex-nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+.header-container .flex-nav li {
+    transition: transform 0.5s; /*esta parte es la transición del nav*/
+}
+
+.header-container .flex-nav li:hover {
+    transform: scale(1.1); 
+}
+
+/*NAV*/
+
+.header-container .flex-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header-container .flex-nav li {
+    display: block;
+}
+
+.header-container .flex-nav a {
+    text-decoration: none;
+    color: #c2c6ce;
+    padding: 10px;
+}
+
+/*SECCION DE INICIO*/
+
+.section-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    /*background-color: #183146;*/
+}
+
+.section-container .container {
+    font-size: 1.7rem;
+    color: #c2c6ce;
+}
+
+.container{
+    flex: 1;
+    text-align: center;
+}
+
+
+
+
+/*animacion para la img de conteiner*/
+
+.container img {
+    padding: 100px;
+    height: 50vh;
+    width: 50vh;
+    margin: 10px;
+
+    border-radius: 20%;
+
+}
+
+.container img:hover{
+    transform: scale(1.1);
+}
+/*---para el texto--*/
+.container p {
+    padding: 10px;
+    transition: color 0.3s ease-in-out; 
+    text-align: left;
+}
+
+.container h1{
+    padding: 30px;
+}
+.container p{
+    margin-left: 80px;
+}
+
+.container .info{
+    text-align: left;
+    padding: 40px;
+}
+.container p:hover {
+    color: #c0d0ef; 
+}
+
+/*animacion de iconos*/
+.container-icon ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.container-icon i {
+    font-size: 40px;
+    color: #c0d0ef;
+    animation: rotate 5s linear infinite; /* Animación de rotación */
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+/*----*/
+
+
+/*recorrido de imagnes ISEEME*/
+
+
+.container-imagene img{
+    padding: 80px;
+    height: 40vh;
+    width: 40vh;
+    border-radius: 20%;
+    object-fit: cover;
+}
+
+
+.container-imagene {
+    opacity: 0; 
+    transition: opacity 1s ease; 
+}
+
+.container-imagene:hover {
+    opacity: 1; 
+}
+
+
+
+/*------*/
+
+/*THEME FAVORITE*/
+.section-container-theme {
+    color: #c2c6ce;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    margin: 10vh;
+    
+}
+
+h1 {
+    color: #c0d0ef;
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out; 
+    font-size: 3rem;
+}
+
+.h2-container {
+    display: flex;
+    justify-content: space-around; 
+    gap: 70px;
+    overflow: hidden;
+}
+
+.h2-container .subtitulo h2{
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.subtitulo{
+    font-size: 1.7rem;
+}
+.subtitulo p{
+    text-align: left;
+    transform: translateX(-100%);
+    animation: slide-in 1s forwards;
+    padding: 20px;
+    background-color: #0f1c30;
+    border: 1px solid #000;
+    width: 40vh; /
+}
+
+@keyframes slide-in {
+    to {
+        transform: translateX(0); 
+    }
+}
+
