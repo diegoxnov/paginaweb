@@ -1,6 +1,6 @@
 body{
     /*background-color: rgb(54, 69, 80);*/
-    background-image: url('/imagenes/fondo3.jpg');
+    background-image: url('fondo3.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
